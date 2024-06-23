@@ -57,10 +57,10 @@
             <div><span>@{{ site.github_username }}</span></div>
           </a></li>
         {% endif %}
-        {% if site.twitter_username %}
-          <li><a aria-label="My Twitter" href="https://twitter.com/{{ site.twitter_username }}">
-            <img src="{{ '/assets/img/twitter.svg' | prepend: site.baseurl }}" alt="My Twitter">
-            <div><span>@{{ site.twitter_username }}</span></div>
+        {% if site.stackoverflow_username %}
+          <li><a aria-label="My StackOverflow" href="https://stackoverflow.com/{{ site.stackoverflow_username }}">
+            <img src="{{ '/assets/img/logo-stackoverflow.svg' | prepend: site.baseurl }}" alt="My StackOverflow">
+            <div><span>@{{ site.stackoverflow_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.instagram_username %}
