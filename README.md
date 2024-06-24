@@ -16,8 +16,6 @@ A simple and modern resume template, best fit for either **Academic CV (Curricul
 
 Live demo is available [here](https://byanko55.github.io/resume-demo/).
 
-![demo](https://i.ibb.co/HYshYc0/231232121.webp)
-
 ## Setup
 Fork [this repository](https://github.com/byanko55/jekyll-professional-resume) or download the [source](https://github.com/byanko55/jekyll-professional-resume/releases) as a zip.
 
