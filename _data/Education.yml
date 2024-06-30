@@ -2,10 +2,11 @@ subject: Education
 listing-order: 1
 icon: "/assets/img/graduation-cap.svg"
 contents:
-  - title: Seneca Polytechnic,Honors Bacheloer in Softtware Development
-    description:
-      - This four-year honors bachelor degree program provides comprehensive knowledge and technical skills in software development languages. 
-        It covers operating systems, web applications, multimedia interfaces, information security, databases, system analysis, and design principles. 
-        Additionally, it focuses on developing effective communication skills for presenting technical ideas.
-    grade: "**GPA**: `3.7/4`"
-    date: Sepr. 2019 - Dec. 2023
+  - title: Seneca Polytechnic
+    - subtitle: Honors Bachelor in Software Development
+      description:
+        - This four-year honors bachelor degree program provides comprehensive knowledge and technical skills in software development languages. 
+          It covers operating systems, web applications, multimedia interfaces, information security, databases, system analysis, and design principles. 
+          Additionally, it focuses on developing effective communication skills for presenting technical ideas.
+      grade: "**GPA**: `3.7/4`"
+      date: Sep. 2019 - Dec. 2023
