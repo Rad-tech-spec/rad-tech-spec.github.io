@@ -2,7 +2,8 @@ subject: Certifications
 listing-order: 6
 icon: "/assets/img/certificate.svg"
 contents:
-  # - title: Presidents Honors List
-  #   description: This award is given to students who are studying full-time and have achieved a GPA of 4 for the term.
-  #   date: Dec. 2020 ~ Aug. 2023
+  - title: Scrum Master Accredited Certification™
+    description: 'Credential ID: 26828522021882'
+    link: https://www.scrum-institute.org/badges/26828522021882
+    date: Apr. 2024 ~ No Expiry 
 
