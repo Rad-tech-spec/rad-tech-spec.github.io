@@ -2,6 +2,13 @@ subject: Experiences
 listing-order: 2
 icon: "/assets/img/briefcase.svg"
 contents:
+  - title: Actemium 
+      role: Junior Automation Specialist / IT
+      description:
+        - Designing and implementing new REST-API system collecting, managing and storing data using Python.
+        - Collaborated on creating new water treatment using PLC/OIT/HMI/SCADA applications.
+        - Maintaining and monitoring existing PLC programs.
+      date: Jun. 2024 - Present
 
   - title: Employment and Social Development Canada (ESDC)
     role: DevOps Developer - Internship
