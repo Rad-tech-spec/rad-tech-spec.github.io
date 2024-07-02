@@ -4,9 +4,10 @@ icon_img: /assets/img/icon.svg
 
 name: "Rad Eshghi"
 job: "Software Developer"
-obj: "Welcome to my online portfolio!\n  
+obj: | 
+      Welcome to my online portfolio!   
       Explore my work, projects, and achievements as a passionate developer dedicated to creating innovative and efficient solutions. 
-      Let's connect and collaborate!"
+      Let's connect and collaborate!
 
 phone_number: +1(647)648-8352
 address: Richmond Hill, Canada
