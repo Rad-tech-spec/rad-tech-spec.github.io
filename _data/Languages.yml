@@ -4,3 +4,4 @@ icon: "/assets/img/globe.svg"
 contents:
   - title: "English: <span style='color: cornflowerblue; margin: auto 8px; font-family: cursive;'>●●●●●</span>"
   - title: "Farsi: <span style='color: goldenrod; margin: auto 8px; font-family: cursive;'>●●●●●</span>"
+  # Try removing the space between it on the phone UI.

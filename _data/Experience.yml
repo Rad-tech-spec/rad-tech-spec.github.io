@@ -8,6 +8,7 @@ contents:
     - Designed and implemented a new REST-API system for data collection, management, and storage using Python.
     - Collaborated on the development of water treatment systems using PLC/OIT/HMI/SCADA applications.
     - Maintained and monitored existing PLC programs to ensure optimal performance and reliability.
+    # Add more points at some point.
     date: Jun. 2024 - Present
     image: "![](/assets/img/actemium.png)"
 

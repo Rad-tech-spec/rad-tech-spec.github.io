@@ -2,12 +2,12 @@ subject: Projects
 listing-order: 3
 icon: "/assets/img/clipboard-list.svg"
 contents:
-  # - title: "ChatPPT ([https://chat.opena1.com/](https://chat.openai.com/))"
+  # - title: "Feragment Micro Services ([https://chat.opena1.com/](https://chat.openai.com/))"
   #   description: 
   #     - Chatbot developed based on a large language model
   #     - Designed Generative algorithm to generate novel human-like content
   #     - "Technology Used: Rust, Typescript, Python, Ruby"
-  #   image: "![](https://i.ibb.co/hX2wYLB/231321.webp)"
+  #     link: "[Show Project](https://github.com/Rad-tech-spec/Fragments-Microservice/tree/main)"
   # - title: "AW5-cli ([https://github.com/aw5/aw5-cli](https://github.com/aws/aws-cli))"
   #   description: 
   #     - Universal Command Line Interface for Amazone Web Services
