@@ -2,18 +2,14 @@ subject: Projects
 listing-order: 3
 icon: "/assets/img/clipboard-list.svg"
 contents:
-  - title: "Feragment Micro Services ([https://chat.opena1.com/](https://chat.openai.com/))"
+  - title: "Feragment Micro Services"
     description: 
-      - Monitored and analyzed five environments, reducing downtimes by 35% through error debugging.
-      - Designed and deployed four new features, following the development lifecycle.
-      - Built two automated services using Ansible, Jenkins, YML, and Bash scripting.
-      - Installed and configured API-Curio in one new ARO environment.
-      - Used APIM services with Terraform to manage over 10 new API keys.
-      - Collaborated on developing 5+ new REST and SOAP APIs in a Spring Boot microservice architecture.
-      - Maintained accuracy and thoroughness over 90% of work.
-      - Adapted to 3+ new tools, technologies, and processes.
-      - Break down complex problems into manageable parts.
+      - Utilized JavaScript · CI/CD · NoSQL · Amazon Cognito · Amazon EC2 · Amazon S3 · Amazon Elastic Container Registry (ECR) · HTML.
+      - Developed a cloud-based microservice using cloud APIs, SDKs, and a mix of server-based and serverless architectures.
+      - Automated installations and scripted processes using common Linux commands, implementing data storage with managed cloud services.
+      - Created automatic integration and deployment workflows to streamline development processes.
     link: "[Show Project](https://github.com/Rad-tech-spec/Fragments-Microservice/tree/main)"
+    image: 
   # - title: "AW5-cli ([https://github.com/aw5/aw5-cli](https://github.com/aws/aws-cli))"
   #   description: 
   #     - Universal Command Line Interface for Amazone Web Services
