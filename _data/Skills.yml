@@ -26,11 +26,11 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original-wordmark.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original-wordmark.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original-wordmark.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original-wordmark.svg)
     "
   - title: Other
-    description: "
-      OPP
-      Design Pattern
-      API Design
-      Relational Database
-    "
+    description:  
+    - OOP 
+    - Design Pattern 
+    - API Design 
+    - Relational Database
