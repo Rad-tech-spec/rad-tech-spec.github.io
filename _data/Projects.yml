@@ -15,6 +15,7 @@ contents:
       - Factory workers use a variety of existing mobile apps to write short status updates and reports, which need to be saved as JSON, Markdown, plain Text, and sometimes HTML.
         
       - Automated cameras on assembly lines take regular images of damaged parts, which need to get stored for audit purposes.
+      
 
       The company invest in a highly scalable service for working with these so-called fragments of text and images. This service needs to connect seamlessly with the rest of the existing 
       systems (e.g., use existing authorization, and work over HTTP). It also needs to be deployed to AWS, which is the cloud provider used for the rest of the company's systems."
