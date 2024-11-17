@@ -5,11 +5,11 @@ contents:
   - title: "Fragment Microservices"
     date: Sep. 2022 - Dec. 2022
     description: |
-     We were asked to develop a new cloud-based microservice for a fictional Canadian company. This company specializes 
-     in producing automotive parts and has been working hard for the past three years to connect, digitize, and automate all of its internal systems.
+      We were asked to develop a new cloud-based microservice for a fictional Canadian company. This company specializes 
+      in producing automotive parts and has been working hard for the past three years to connect, digitize, and automate all of its internal systems.
 
-     As the new system has been built, the company has identified a missing capability such as many sub-systems need to be able to work with small fragments of text or images. 
-     These are smaller than a traditional 'document' and use a large number of different formats. 
+      As the new system has been built, the company has identified a missing capability such as many sub-systems need to be able to work with small fragments of text or images. 
+      These are smaller than a traditional 'document' and use a large number of different formats. 
       
     - IoT devices on the manufacturing floor produce a variety of reports (text) that need to get stored and retrieved. Some use plain text, others CSV files, and others JSON.
       
@@ -17,8 +17,8 @@ contents:
       
     - Automated cameras on assembly lines take regular images of damaged parts, which need to get stored for audit purposes.
     
-     The company invest in a highly scalable service for working with these so-called fragments of text and images. This service needs to connect seamlessly with the rest of the existing 
-     systems (e.g., use existing authorization, and work over HTTP). It also needs to be deployed to AWS, which is the cloud provider used for the rest of the company's systems."
+      The company invest in a highly scalable service for working with these so-called fragments of text and images. This service needs to connect seamlessly with the rest of the existing 
+      systems (e.g., use existing authorization, and work over HTTP). It also needs to be deployed to AWS, which is the cloud provider used for the rest of the company's systems."
 
     link: "[Show Project](https://github.com/Rad-tech-spec/Fragments-Microservice/tree/main)"
      
