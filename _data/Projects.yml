@@ -5,8 +5,8 @@ contents:
   - title: "Fragment Microservices"
     date: Sep. 2022 - Dec. 2022
     description: 
-    We were asked to develop a new cloud-based microservice for a fictional Canadian company. This company specializes 
-    in producing automotive parts and has been working hard for the past three years to connect, digitize, and automate all of its internal systems.
+    "We were asked to develop a new cloud-based microservice for a fictional Canadian company. This company specializes 
+    in producing automotive parts and has been working hard for the past three years to connect, digitize, and automate all of its internal systems."
 
     #As the new system has been built, the company has identified a missing capability such as many sub-systems need to be able to work with small fragments of text or images. 
     #These are smaller than a traditional 'document' and use a large number of different formats. 
