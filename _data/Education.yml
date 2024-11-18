@@ -8,7 +8,7 @@ contents:
       - This four-year honors bachelor degree program provides comprehensive knowledge and technical skills in software development languages. 
         It covers operating systems, web applications, multimedia interfaces, information security, databases, system analysis, and design principles. 
         Additionally, it focuses on developing effective communication skills for presenting technical ideas.
-    grade: "**GPA**: `3.7/4`"
+    #grade: "**GPA**: `3.7/4`"
     date: Sep. 2019 - Dec. 2023
   - title: Presidents Honors List
     date: Dec. 2020 ~ Aug. 2023
