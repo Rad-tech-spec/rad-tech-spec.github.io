@@ -5,7 +5,15 @@ contents:
   - title: Actemium- Summa Engineering
     role: Junior Automation Specialist / IT
     description:
-    - Designed and implemented a new REST-API system for data collection, management, and storage using Python.
+    - "Backend Development: Built a Python-based system to collect data via REST APIs, transform JSON files 
+    into readable tags with parameters, and store them in a Historian GE server."
+    - "System Security: Implemented JWT tokens and cryptography to ensure secure handling of sensitive data."
+    - "System Deployment & Automation: Installed the solution on a Linux terminal and automated daily 
+    execution using Cron jobs."
+    - "HMI & Monitoring: Linked stored tags to iFix objects for live monitoring, including managing HMI screens, 
+    alarms, and alerts."
+    - "Innovation & Results: Researched new opportunities, promoted the application for use, and successfully 
+    improved company services and profitability."
     - Collaborated on the development of water treatment systems using PLC/OIT/HMI/SCADA applications.
     - Maintained and monitored existing PLC programs to ensure optimal performance and reliability.
     # Add more points at some point.
