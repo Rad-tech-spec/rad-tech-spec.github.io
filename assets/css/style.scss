@@ -11,10 +11,10 @@
     --theme2-medium: #8888A4;
     --theme2-dim: #66658C;
     --theme2-dark: #484776;
-    --theme3-light: #E0F7FA; // Changed to match the blue theme
-    --theme3-medium: #B2EBF2; // Changed to match the blue theme
-    --theme3-dim: #80DEEA; // Changed to match the blue theme
-    --theme3-dark: #5b7ace; // Changed to match the blue theme
+    --theme3-light: #FFF8E4;
+    --theme3-medium: #EBDFBB;
+    --theme3-dim: #C8B887;
+    --theme3-dark: #A8955A;
     --theme4-light: #AABEB6;
     --theme4-medium: #7FA093;
     --theme4-dim: #5C8876;
@@ -75,7 +75,7 @@ a { text-decoration:none; }
         left:50%;
         transform: translate(-50%, -50%);
         border-radius:50%;
-        border: 4px solid var(--theme3-dark);
+        border: 4px solid var(--theme4-light);
     }
 
     .profile-zone .personal-info {
