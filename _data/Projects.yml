@@ -34,9 +34,39 @@ contents:
       - "Backend Development: Created a secure backend with Node.js, TypeScript, and MongoDB, emphasizing RESTful API design for smooth data integration."
       - "Continuous Deployment: Implemented a CI/CD pipeline for continuous integration and deployment, which decreased deployment times and improved development cycles."
       - "Infrastructure & Security: Built and secured backend services using Docker and JWT for authentication, applying best practices in cloud-based application security."
-  
+
+  - title: "Library Management System"
+    date: Feb. 2021 - Apr. 2020
+    description: |
+      I designed a small library system to store books, videos, and magazines. Users can create accounts and search 
+      the system for items they wish to borrow.
+
+    desc: 
+      - "Application Development: Designed using Java and JavaFX, providing a user-friendly interface to manage 
+      books, videos, and magazines."
+      - "Database Design: Implemented robust databases with PostgreSQL and NoSQL to support item storage, 
+      retrieval, and user account management."
+      - "Backend & Tools: Developed and debugged backend functionality using Node.js and Spring, leveraging Git 
+      for version control throughout the project."
+
+    link: "[Show Project](https://github.com/Rad-tech-spec/Librarian-System)"
+
+  - title: "Simulated Assembly Line"
+    date: Dec. 2019 - Mar. 2020
+    description: |
+      Developed an assembly line system to efficiently fill customer orders from inventory. Implemented abstract base 
+      classes and utilized multiple inheritance to enhance code reusability and structure. Focused on optimizing the 
+      design for clean, readable, and maintainable code.
+
+    desc: 
+      - "Object-Oriented Programming (OOP): Designed and implemented structured solutions using abstract base
+      classes and multiple inheritance in C++."
+      - "C++ Development & Debugging: Built efficient systems while ensuring functionality and reliability through
+      thorough debugging"
+
+    link: "[Show Project](https://github.com/Rad-tech-spec/Simulated-Assembly-Line)"
+
+
+
+      
   #   image: "![](https://i.ibb.co/R9150c4/12421323.webp)"
-
-
-
-  
