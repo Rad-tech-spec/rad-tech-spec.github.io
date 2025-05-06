@@ -2,6 +2,27 @@
 ---
 
 :root {
+    --color-background: #F7F7F7; /* Light Gray */
+    --theme1-light: #E0E0E0; /* Silver */
+    --theme1-medium: #B0B0B0; /* Gray */
+    --theme1-dim: #808080; /* Dim Gray */
+    --theme1-dark: #505050; /* Dark Gray */
+    --theme2-light: #D9D9D9; /* Light Steel */
+    --theme2-medium: #A6A6A6; /* Steel */
+    --theme2-dim: #737373; /* Slate Gray */
+    --theme2-dark: #404040; /* Charcoal */
+    --theme3-light: #F0F0F0; /* White Smoke */
+    --theme3-medium: #C0C0C0; /* Gainsboro */
+    --theme3-dim: #909090; /* Ash Gray */
+    --theme3-dark: #606060; /* Gunmetal */
+    --theme4-light: #E8E8E8; /* Platinum */
+    --theme4-medium: #B8B8B8; /* Pewter */
+    --theme4-dim: #888888; /* Graphite */
+    --theme4-dark: #585858; /* Onyx */
+    --font-dark: #1A1A1A; /* Jet Black */
+}
+
+/*:root {
     --color-background: #fffdfb;
     --theme1-light: #F6D8CB;
     --theme1-medium: #D0A694;
@@ -20,7 +41,7 @@
     --theme4-dim: #5C8876;
     --theme4-dark: #3D725D;
     --font-dark: #202424;
-}
+}*/
 
 html, body {
     margin:0;
