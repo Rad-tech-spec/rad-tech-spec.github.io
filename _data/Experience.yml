@@ -2,8 +2,8 @@ subject: Experiences
 listing-order: 2
 icon: "/assets/img/briefcase.svg"
 contents:
-  - title: Actemium- Summa Engineering
-    role: Junior Automation Specialist / IT
+  - title: Actemium - Summa Engineering
+    role: Automation Specialist / IT
     description:
     - "Backend Development: Built a Python-based system to collect data via REST APIs, transform JSON files 
     into readable tags with parameters, and store them in a Historian GE server."
@@ -21,7 +21,7 @@ contents:
     image: "![](/assets/img/actemium.png)"
 
   - title: Employment and Social Development Canada (ESDC)
-    role: DevOps Developer - Internship
+    role: DevOps Engineer - Internship
     description:
       - Monitored and analyzed five environments, reducing downtimes by 35% through error debugging.
       - Designed and deployed four new features, following the development lifecycle.
