@@ -1,9 +1,0 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-.bundle
-vendor
-Gemfile.lock
-*.gem
-/home/exit/Myport/rad-tech-spec.github.io/_data/Publications.yml
