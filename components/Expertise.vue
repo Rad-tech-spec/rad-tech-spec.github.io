@@ -3,7 +3,7 @@
     <p class="mb-6 text-gray-700 dark:text-blue-100 text-lg">
       Here are the main programming languages, technologies, and tools I work with — from backend development and DevOps automation to AI/ML research and side projects.
     </p>
-    <img src="/assets/icons/scrum@2x.png" alt="Skills Overview" class="w-64 h-auto rounded-lg" />
+    <img src="../assets/icons/scrum@2x.png" alt="Skills Overview" class="w-64 h-auto rounded-lg" />
     <div v-for="key in Object.keys(expertises)" class="mt-2">
       <h2 class="mb-2 text-xl text-gray-700 font-bold dark:text-blue-200 capitalize flex items-center gap-2">
         {{ key }}
