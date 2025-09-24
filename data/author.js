@@ -28,7 +28,7 @@ import Github from "assets/devicon/github.svg?component";
 import TypeScript from "assets/devicon/ts.svg?component";
 
 const author = {
-    author_image: "../public/author.png",
+    author_image: "/author.png",
     name: "Rad Eshghi",
     position: "Software Developer",
     email: "wins_airy0s@icloud.com",
