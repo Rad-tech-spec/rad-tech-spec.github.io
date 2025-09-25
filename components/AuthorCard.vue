@@ -16,39 +16,46 @@
         <div class="md:text-lg text-gray-600 dark:text-blue-100">
           {{ author.position }}
         </div>
-        <a
-          :href="`mailto:${author.email}`"
-          class="text-gray-600 md:hidden mt-1 dark:text-blue-100"
-        >
-          {{ author.email }}
-        </a>
       </div>
     </div>
 
-    <div class="mx-7 hidden md:block">
-      <div class="my-2 text-gray-600 flex dark:text-blue-100">
+    <div class="mx-7 mt-3 flex flex-wrap items-center justify-center gap-3 md:hidden">
+      <a
+        v-for="contact in contactLinks"
+        :key="`mobile-${contact.id}`"
+        :href="contact.href"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 dark:border-blue-400/50 dark:bg-slate-800 dark:text-blue-100 dark:hover:bg-blue-700/40 dark:focus:ring-blue-300"
+        target="_blank"
+        rel="noopener noreferrer"
+        :aria-label="contact.label"
+      >
+        <component :is="contact.icon" class="h-5 w-5" />
+      </a>
+    </div>
+
+    <div class="mx-7 hidden md:flex md:flex-col md:gap-2">
+      <div class="my-2 text-gray-600 flex items-center gap-2 dark:text-blue-100">
         <Mail />
-        <a :href="`mailto:${author.email}`"> {{ author.email }}</a>
+        <a :href="`mailto:${author.email}`" class="hover:underline"> {{ author.email }}</a>
       </div>
-      <div class="my-2 text-gray-600 flex dark:text-blue-100">
+      <div class="my-2 text-gray-600 flex items-center gap-2 dark:text-blue-100">
         <Glob />
         <p>{{ author.location }}</p>
       </div>
-      <div class="my-2 text-gray-600 flex dark:text-blue-200">
-        <Github />
-        <a :href="`https://github.com/${author.socials.github}`"> {{ author.socials.github }}</a>
-      </div>
-      <div class=" text-gray-600 flex dark:text-blue-200">
-        <LinkedIn class="w-6 h-6"/>
-        <a :href="`https://linkedin.com/in/${author.socials.linkedin}`"> {{ author.socials.linkedin }}</a>
-      </div>
-      <div class="my-2 text-gray-600 flex dark:text-blue-200">
-        <Medium class="w-6 h-6" />
-        <a :href="`https://medium.com/@${author.socials.medium}`"> {{ author.socials.medium }}</a>
-      </div>
-      <div class="my-2 text-gray-600 flex dark:text-blue-200">
-        <Youtube />
-        <a :href="`https://youtube.com/${author.socials.youtube}`"> {{ author.socials.youtube }}</a>
+      <div
+        v-for="social in socialLinks"
+        :key="`desktop-${social.id}`"
+        class="my-2 text-gray-600 flex items-center gap-2 dark:text-blue-200"
+      >
+        <component :is="social.icon" class="w-6 h-6" />
+        <a
+          :href="social.href"
+          class="hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ social.display }}
+        </a>
       </div>
     </div>
   </div>
@@ -62,4 +69,44 @@ import Github from "assets/icons/github_new.svg?skipsvgo";
 import LinkedIn from "assets/icons/linkeding.svg?skipsvgo";
 import Youtube from "assets/icons/youtube.svg?skipsvgo";
 import Medium from "assets/icons/medium.svg?skipsvgo";
+
+const contactLinks = [
+  {
+    id: "email",
+    label: "Email",
+    display: author.email,
+    href: `mailto:${author.email}`,
+    icon: Mail,
+  },
+  {
+    id: "github",
+    label: "GitHub",
+    display: author.socials.github,
+    href: `https://github.com/${author.socials.github}`,
+    icon: Github,
+  },
+  {
+    id: "linkedin",
+    label: "LinkedIn",
+    display: author.socials.linkedin,
+    href: `https://linkedin.com/in/${author.socials.linkedin}`,
+    icon: LinkedIn,
+  },
+  {
+    id: "medium",
+    label: "Medium",
+    display: author.socials.medium,
+    href: `https://medium.com/@${author.socials.medium}`,
+    icon: Medium,
+  },
+  {
+    id: "youtube",
+    label: "YouTube",
+    display: author.socials.youtube,
+    href: `https://youtube.com/${author.socials.youtube}`,
+    icon: Youtube,
+  },
+];
+
+const socialLinks = contactLinks.filter((link) => link.id !== "email");
 </script>

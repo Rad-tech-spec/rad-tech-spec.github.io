@@ -1,7 +1,7 @@
 const projectsData = [
   {
     title: "Ario",
-    description: `An Teams 365 multi-agent chatbot designed for a company to enhance productivity by assisting employees with tasks such as finding orders, prices, and vendor information.`,
+    description: `A Teams 365 multi-agent chatbot helped employees save time by automating vendor queries and order lookups.`,
     imgSrc: "",
     href: "#",
     github: "",
@@ -12,7 +12,7 @@ const projectsData = [
   },
   {
     title: "My Doctors App",
-    description: `An app to manage my doctors appointments, prescriptions, and medical history.`,
+    description: `An app to manage doctor’s appointments, prescriptions, and medical history.`,
     imgSrc: "",
     href: "#",
     github: "https://github.com/Rad-tech-spec/MyDoctor",
@@ -21,7 +21,7 @@ const projectsData = [
   },
   {
     title: "TagFlow",
-    description: `This system collects raw data in .json format from Smart Cover API's then reforms and generates tags based on GE Historian standard and stores it in Historian.`,
+    description: `This system reduced manual tagging by automating JSON-to-tag transformation.`,
     imgSrc: "",
     href: "",
     github: "https://github.com/Rad-tech-spec/Tag-Management-System",

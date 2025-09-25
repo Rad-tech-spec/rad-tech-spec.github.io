@@ -26,6 +26,7 @@ import Teams from "assets/devicon/teams.svg?component";
 import MySQL from "assets/devicon/mysql.svg?component";
 import Github from "assets/devicon/github.svg?component";   
 import TypeScript from "assets/devicon/ts.svg?component";
+import Scrum from "assets/devicon/scrum.svg?component"; 
 
 const author = {
     author_image: "/author.png",
@@ -167,13 +168,24 @@ const author = {
                 description: "",
             },
         ],
+        "Certifications": {
+            items: [
+                {
+                    name: "Scrum",
+                    icon: Scrum,
+                    description: "",
+                    link: "https://www.scrum-institute.org/badges/26828522021882",
+                    linkLabel: "Scrum Master",
+                },
+            ],
+        },
     },
     timeline: [
         {
             icon: Briefcase,
             title: "Software Developer at Actemium Canada",
             subtitle: "Jun. 2024 - Aug. 2025",
-            description: "Developed a Python-based store and forward system with multi-structured REST API calls. Setup security using JWT tokens and SSL certifications for secure data handling. Automated system execution using Linux Cron jobs, reducing manual intervention by 40%. Created a reporting system with the Ignition platform using multiple optimized custom SQL queries. Researched new opportunities, promoted the application, and successfully improved company services and profitability.",
+            description: "Developed a store-and-forward system that reduced manual intervention by 40% and improved profitability through automated reporting using Python. Setup security using JWT tokens and SSL certifications for secure data handling. Automated system execution using Linux Cron jobs, reducing manual intervention by 40%. Created a reporting system with the Ignition platform using multiple optimized custom SQL queries. Researched new opportunities, promoted the application, and successfully improved company services and profitability.",
         },
         {
             icon: Briefcase,
@@ -185,7 +197,7 @@ const author = {
             icon: Academy,
             title: "Seneca Polytechnic",
             subtitle: "Sep. 2019 - Dec. 2023",
-            description: "Earned a Honors in Software Development with 3.75 GPA while working part-time. Named on presidents honors list in multiple semesters. Volunteered on tutoring other students in similar field.",
+            description: "Earned a Honors in Software Development with <b>3.75 GPA</b> while working part-time. Named on presidents honors list in multiple semesters. Volunteered on tutoring other students in similar field.",
         },
     ],
 };

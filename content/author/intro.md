@@ -1,6 +1,6 @@
 ---
-title: 👋 Hello, Good Day !
+title: 👋 Hello, Welcome!
 page: intro
 draft: false
 ---
-I started as a curious problem-solver and grew into a developer who thrives in backend engineering and DevOps. Today, I focus on building cloud-native systems, experimenting with AI-driven tools, and creating content to share what I learn along the way. Feel free to explore and learn more about my work and experience.
+I’m a software developer 💻 focused on backend engineering and DevOps 🚀. I specialize in building cloud-native systems ☁️, experimenting with AI tools 🤖, and creating content ✨ to share my learning journey. **Feel free to explore** my website to learn more about my work and projects.

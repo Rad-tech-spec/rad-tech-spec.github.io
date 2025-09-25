@@ -7,7 +7,7 @@
         Projects
       </h1>
       <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        Some of the projects I've build or been a part of. These projects are a showcase of my skills and experience in various technologies.
+        These projects represent my journey as a developer — from academic work to real-world applications. They highlight my experience with cloud platforms, automation, and AI, and reflect my commitment to solving problems, learning continuously, and delivering impact.
       </p>
     </div>
     <main class="relative mb-auto">
