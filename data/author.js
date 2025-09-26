@@ -183,6 +183,13 @@ const author = {
     timeline: [
         {
             icon: Briefcase,
+            title: "Independent Study in Cloud-Native Architecture & AI Tools",
+            subtitle: "July. 2025",
+            description: "Exploring advanced backend patterns, container orchestration, and experimenting with AI-driven automation. Building small-scale prototypes and sharing insights through blog posts and GitHub projects.",
+            currently: true
+        },
+        {
+            icon: Briefcase,
             title: "Software Developer at Actemium Canada",
             subtitle: "Jun. 2024 - Aug. 2025",
             description: "Developed a store-and-forward system that reduced manual intervention by 40% and improved profitability through automated reporting using Python. Setup security using JWT tokens and SSL certifications for secure data handling. Automated system execution using Linux Cron jobs, reducing manual intervention by 40%. Created a reporting system with the Ignition platform using multiple optimized custom SQL queries. Researched new opportunities, promoted the application, and successfully improved company services and profitability.",

@@ -1,5 +1,5 @@
 ---
-title: Hello, Welcome!
+title: Hey there👋
 page: intro
 draft: false
 ---
