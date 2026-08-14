@@ -1,0 +1,25 @@
+# Config for the agent Worker only — the site itself is unaffected and still
+# deploys to GitHub Pages from the gh-pages branch.
+#
+#   npx wrangler secret put ANTHROPIC_API_KEY   (once)
+#   npx wrangler deploy                          (each time the worker or the
+#                                                 agent context changes)
+
+name = "ask-rad"
+main = "worker/index.js"
+compatibility_date = "2026-01-01"
+
+# The Anthropic SDK needs Node built-ins (streams, crypto) that Workers don't
+# expose by default.
+compatibility_flags = ["nodejs_compat"]
+
+# Gives the worker its https://ask-rad.<your-subdomain>.workers.dev URL.
+workers_dev = true
+
+# Per-IP rate limiting: 20 requests/hour. Created with
+#   npx wrangler kv namespace create RATE_LIMIT
+# If this binding is removed the worker still runs — it just skips the limit,
+# leaving the spend cap on the API key as the only ceiling.
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "f1600e2252c24ba3a1f0764df5e3e7bf"

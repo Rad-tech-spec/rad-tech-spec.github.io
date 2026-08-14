@@ -59,6 +59,14 @@ typings/
 # dotenv environment variables file
 .env
 
+# Wrangler's local secrets file — never commit this
+.dev.vars
+
+# Nuxt build output. .nuxt and dist were already ignored but .output was not,
+# so a stray nitro.json was being tracked. The built site belongs on the
+# gh-pages branch, not in source history.
+.output/
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 

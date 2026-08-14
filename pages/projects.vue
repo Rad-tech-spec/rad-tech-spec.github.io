@@ -1,34 +1,39 @@
 <template>
-  <div class="max-w-3xl px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
-    <div class="pt-6 pb-8 space-y-2 md:space-y-5">
-      <h1
-        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
-      >
-        Projects
-      </h1>
-      <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        These projects represent my journey as a developer — from academic work to real-world applications. They highlight my experience with cloud platforms, automation, and AI, and reflect my commitment to solving problems, learning continuously, and delivering impact.
-      </p>
-    </div>
-    <main class="relative mb-auto">
-      <div class="">
-        <div class="container py-12">
-          <div class="flex flex-wrap -m-4">
-            <project-card
-              v-for="item in projectsData"
-              :key="item.title"
-              :title="item.title"
-              :description="item.description"
-              :href="item.href"
-              :github="item.github"
-              :techs="item.techs"
-              :visibility="item.visibility"
-              :current="item.current"
-            ></project-card>
-          </div>
-        </div>
+  <div class="w-full px-4 py-12 sm:px-6 md:py-16">
+    <header class="max-w-2xl">
+      <!--
+        Kept as sr-only rather than deleted: a page with no <h1> loses its
+        anchor for screen-reader navigation and for search engines. Hidden
+        visually, still announced and indexed.
+      -->
+      <h1 class="sr-only">Projects</h1>
+
+      <div class="font-mono text-sm leading-relaxed sm:text-base">
+        <p class="text-ink">
+          <span class="mr-2 font-bold text-accent-mid">$</span>ls -la /projects
+        </p>
+        <!-- Count comes from the data, so it can't drift when you add one. -->
+        <p class="mt-1.5 text-ink-muted">
+          # {{ projectsData.length }} directories — a few shipped, the rest taught me
+          something
+        </p>
       </div>
-    </main>
+    </header>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <ProjectCard
+        v-for="item in projectsData"
+        :key="item.title"
+        :title="item.title"
+        :description="item.description"
+        :href="item.href"
+        :github="item.github"
+        :techs="item.techs"
+        :visibility="item.visibility"
+        :current="item.current"
+        :video="item.video"
+      />
+    </div>
   </div>
 </template>
 
@@ -38,15 +43,7 @@ import siteMetaInfo from "@/data/sitemetainfo.js";
 
 useSeoMeta({
   title: `${siteMetaInfo.title} | Projects`,
-  meta: [
-    { charset: "utf-8" },
-    { name: "viewport", content: "width=device-width, initial-scale=1" },
-    {
-      hid: "description",
-      name: "description",
-      content: "Some of Projects developed by Solaiman",
-    },
-  ],
-  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+  description:
+    "Selected projects by Rad Eshghi — cloud microservices on AWS, multi-agent chatbots, automation tooling, and systems programming.",
 });
 </script>

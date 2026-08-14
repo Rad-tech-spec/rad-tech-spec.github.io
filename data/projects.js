@@ -1,3 +1,18 @@
+/**
+ * Project entries.
+ *
+ * video — optional walkthrough. Use ONE of:
+ *   { youtube: "VIDEO_ID" }        preferred; embeds via youtube-nocookie
+ *   { src: "/videos/name.mp4" }    a file under public/
+ * Both accept an optional `poster: "/videos/name.jpg"` thumbnail.
+ *
+ * Leave `video` empty and the card shows a "walkthrough coming soon" panel, so
+ * the layout stays correct until you've finished editing them.
+ *
+ * NOTE on self-hosting video: GitHub Pages caps repos at ~1GB with a 100MB
+ * per-file limit, and video is the fastest way to hit both. YouTube (unlisted
+ * if you don't want it public) keeps the repo small and streams better.
+ */
 const projectsData = [
   {
     title: "Ario",
@@ -7,17 +22,18 @@ const projectsData = [
     github: "",
     techs: ["Python", "Typescript", "Azure", "Teams"],
     visibility: "private",
-    current: true
-    
+    current: true,
+    video: {},
   },
   {
     title: "My Doctors App",
-    description: `An app to manage doctor’s appointments, prescriptions, and medical history.`,
+    description: `An app to manage doctor's appointments, prescriptions, and medical history.`,
     imgSrc: "",
     href: "#",
     github: "https://github.com/Rad-tech-spec/MyDoctor",
     techs: ["Typescript", "Angular", "HTML", "CSS"],
-    visibility: "public"
+    visibility: "public",
+    video: {},
   },
   {
     title: "TagFlow",
@@ -26,7 +42,8 @@ const projectsData = [
     href: "",
     github: "https://github.com/Rad-tech-spec/Tag-Management-System",
     techs: ["Python", "Shell", "SQL"],
-    visibility: "public"
+    visibility: "public",
+    video: {},
   },
   {
     title: "Fragments-Microservice",
@@ -35,16 +52,18 @@ const projectsData = [
     href: "#",
     github: "https://github.com/Rad-tech-spec/Fragments-Microservice",
     techs: ["AWS (EC2, S3, RDS, Cognito)", "Javascript", "Docker"],
-    visibility: "public"
+    visibility: "public",
+    video: {},
   },
   {
     title: "Library Management System",
     description: `A desktop application to manage books, members, and loans in a library setting.`,
     imgSrc: "",
     href: "",
-    github: "https://github.com/Rad-tech-spec/Librarian-System?tab=readme-ov-file",
+    github: "https://github.com/Rad-tech-spec/Librarian-System",
     techs: ["Java (Spring Boot, JavaFX)", "PostgreSQL (JDBC)", "Heroku"],
-    visibility: "public"
+    visibility: "public",
+    video: {},
   },
   {
     title: "Simulated Assembly Line",
@@ -53,7 +72,8 @@ const projectsData = [
     href: "",
     github: "https://github.com/Rad-tech-spec/Simulated-Assembly-Line",
     techs: ["C++", "OOP"],
-    visibility: "public"
+    visibility: "public",
+    video: {},
   },
 ];
 

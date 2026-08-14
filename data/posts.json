@@ -1,0 +1,43 @@
+{
+  "handle": "@codewithrad",
+  "syncedAt": "2026-08-10",
+  "posts": [
+    {
+      "title": "Optimizing AI Tokens & the Human in the Lead",
+      "link": "https://medium.com/@codewithrad/optimizing-ai-tokens-the-human-in-the-lead-5098d0465df2",
+      "date": "2026-08-01",
+      "readingMinutes": 5,
+      "excerpt": "The future of AI in software is about writing our judgment down. I spent an evening at the DevOps Toronto event, and here is my takeaway. Optimize Your Tokens Stop burning your tok…",
+      "tags": [
+        "ai",
+        "software-development",
+        "token",
+        "ai-agent"
+      ],
+      "cover": "https://cdn-images-1.medium.com/max/1024/1*hGDGbzVt2D7mdFhYplsnmA.png"
+    },
+    {
+      "title": "The Best Way to Learn Python Programming: A Step-by-Step Guide",
+      "link": "https://medium.com/@codewithrad/the-best-way-to-learn-python-programming-a-step-by-step-guide-61c91ef37fbf",
+      "date": "2025-03-12",
+      "readingMinutes": 2,
+      "excerpt": "Python is one of the most beginner-friendly and powerful programming languages in the world. Whether you’re a complete beginner or an experienced developer looking to add Python to…",
+      "tags": [
+        "finding-yourself",
+        "understanding",
+        "quick-start-guide",
+        "begginer"
+      ],
+      "cover": "https://cdn-images-1.medium.com/max/1024/1*0ec0pUowrUb4BtMSSIxAFQ.jpeg"
+    },
+    {
+      "title": "Mastering Modern C++: Key Features and Best Practices",
+      "link": "https://medium.com/@codewithrad/mastering-modern-c-key-features-and-best-practices-01ccafc16038",
+      "date": "2024-07-03",
+      "readingMinutes": 3,
+      "excerpt": "C++ is a powerful and versatile programming language that has evolved significantly since its inception. With the introduction of C++11 and subsequent standards (C++14, C++17, C++2…",
+      "tags": [],
+      "cover": "https://cdn-images-1.medium.com/max/1024/1*DaakgPrO9c5efmCTDK_SnQ.jpeg"
+    }
+  ]
+}

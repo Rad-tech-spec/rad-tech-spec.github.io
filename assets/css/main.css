@@ -2,11 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /*
+   * Design tokens. Stored as space-separated RGB channels (not hex) so Tailwind
+   * can apply opacity to them — `bg-surface/45` becomes rgb(var(--c-surface) / .45).
+   *
+   * Every colour on the site should come from one of these. A hardcoded hex in a
+   * component is a bug in dark mode, because there's nothing to swap.
+   */
+  :root {
+    --c-canvas: 242 239 231; /* #f2efe7 cream page */
+    --c-nav: 249 239 236; /* #f9efec pink-tinted bar */
+    --c-surface: 255 255 255; /* card fill */
+    --c-surface-2: 253 250 245; /* terminal / raised panel */
+    --c-line: 222 215 200; /* borders, dividers */
+    --c-line-soft: 232 226 212; /* grid ruling */
+    --c-edge: 255 255 255; /* the lit edge on glass */
+
+    --c-ink: 15 23 42;
+    --c-ink-soft: 71 85 105;
+    --c-ink-muted: 148 163 184;
+
+    --c-accent: 154 84 38; /* #9a5426 text-safe terracotta */
+    --c-accent-mid: 184 102 58; /* #b8663a fills */
+    --c-accent-bright: 200 121 74; /* #c8794a decorative */
+    --c-accent-deep: 127 67 25;
+    --c-accent-soft: 247 231 217; /* chip backgrounds */
+    --c-accent-contrast: 247 239 231; /* text sitting ON accent */
+
+    --c-grid-beam: 184 166 138;
+    --c-shadow: 138 122 99;
+
+    /* Consumed by GridBackground and the timeline node rings. */
+    --page-bg: rgb(var(--c-canvas));
+
+    color-scheme: light;
+  }
+
+  .dark {
+    /*
+     * Near-neutral dark, not brown. An earlier pass carried the light theme's
+     * cream warmth straight into the neutrals (canvas 19/18/16, edge 92/84/73)
+     * and the whole surface read as brown. The warmth now lives only in the
+     * accent, which is where the brand identity actually is — the greys carry
+     * a couple of points of blue so they read as neutral rather than muddy.
+     */
+    --c-canvas: 18 18 20; /* #121214 */
+    --c-nav: 25 25 28;
+    --c-surface: 30 30 34; /* #1e1e22 */
+    --c-surface-2: 23 23 26;
+    --c-line: 52 52 58;
+    /*
+     * Grid ruling. Near-black amplifies small differences — the old 42/38/33
+     * against an 19/18/16 canvas was a 23-point jump and read as a hard cage,
+     * where the light theme's equivalent is only 10 points against cream.
+     * Kept to ~11 points here so it matches how the light grid feels.
+     */
+    --c-line-soft: 29 29 32;
+    --c-edge: 66 66 74;
+
+    --c-ink: 240 240 244;
+    --c-ink-soft: 189 189 198;
+    /* 133, not 131: muted text sits on cards as well as the canvas, and against
+       --c-surface the darker value came to 4.43 — just under the 4.5 AA floor. */
+    --c-ink-muted: 133 133 143;
+
+    /* Lightened so it still passes contrast against a dark canvas — the light
+       theme's #9a5426 would be nearly unreadable here. */
+    --c-accent: 224 154 112;
+    --c-accent-mid: 209 133 87;
+    --c-accent-bright: 224 154 112;
+    --c-accent-deep: 240 184 150;
+    --c-accent-soft: 56 39 30; /* chip fill — stays warm; it's an accent tint */
+    --c-accent-contrast: 18 18 20; /* tracks --c-canvas */
+
+    /* The travelling beam keeps its warmth — it's meant to read as light in the
+       accent colour — but toned down so it lifts off the quieter grid. */
+    --c-grid-beam: 116 96 78;
+    --c-shadow: 0 0 0;
+
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-ink;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv02", "cv03", "cv04", "calt";
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
 .nuxt-link-exact-active {
-  @apply text-blue-500;
+  @apply text-accent;
 }
 
 .prose h2 + p {
   margin-top: 0.0em; /* or 0 for no space */
 }
-

@@ -26,19 +26,25 @@ import Teams from "assets/devicon/teams.svg?component";
 import MySQL from "assets/devicon/mysql.svg?component";
 import Github from "assets/devicon/github.svg?component";   
 import TypeScript from "assets/devicon/ts.svg?component";
-import Scrum from "assets/devicon/scrum.svg?component"; 
+import Scrum from "assets/devicon/scrum.svg?component";
+import Golang from "assets/devicon/golang.svg?component";
+import RestApi from "assets/devicon/restapi.svg?component";
+import Certificate from "assets/icons/certificate.svg?component";
 
 const author = {
     author_image: "/author.png",
     name: "Rad Eshghi",
-    position: "Software Developer",
-    email: "wins_airy0s@icloud.com",
+    // Matches the headline on the resume and LinkedIn.
+    position: "Backend & DevOps Engineer",
+    // Email intentionally NOT stored here. Anything in this file ends up in the
+    // JS bundle as plain text, which is exactly what harvesters scrape. It
+    // lives base64-encoded in data/contact.js and is decoded only on click.
     location: "Toronto, Ontario",
     socials: {
         github: "rad-tech-spec",
         linkedin: "rad-eshghi",
         youtube: "@RadEshghi",
-        medium: "@eshghirad97",
+        medium: "@codewithrad",
     },
     expertises: {
         "Programming Languages": [
@@ -50,6 +56,11 @@ const author = {
             {
                 name: "Python",
                 icon: PythonIcon,
+                description: "",
+            },
+            {
+                name: "Golang",
+                icon: Golang,
                 description: "",
             },
             {
@@ -90,6 +101,11 @@ const author = {
         },
         "Backend & Databases": [
             {
+                name: "REST APIs",
+                icon: RestApi,
+                description: "",
+            },
+            {
                 name: "Node.js",
                 icon: Node,
                 description: "",
@@ -111,6 +127,11 @@ const author = {
             },             
         ],
         "Cloud & DevOps": [
+            {
+                name: "Linux",
+                icon: Linux,
+                description: "",
+            },
             {
                 name: "AWS",
                 icon: AWS,
@@ -171,40 +192,94 @@ const author = {
         "Certifications": {
             items: [
                 {
-                    name: "Scrum",
+                    // Active clearance — a hard filter for a lot of Toronto
+                    // government and enterprise work, and previously nowhere
+                    // on the site despite being on the resume and LinkedIn.
+                    name: "Gov. of Canada Reliability Status",
+                    icon: Certificate,
+                    description: "",
+                },
+                {
+                    name: "Scrum Master (CSM)",
                     icon: Scrum,
                     description: "",
                     link: "https://www.scrum-institute.org/badges/26828522021882",
-                    linkLabel: "Scrum Master",
+                    linkLabel: "Scrum Master (CSM)",
+                },
+                {
+                    name: "GDG DevFest 2025",
+                    icon: Certificate,
+                    description: "",
                 },
             ],
         },
     },
+    /*
+     * Titles, dates, employers, and figures are taken from the resume and
+     * LinkedIn profile — keep the three in sync when any of them changes.
+     *
+     * `bullets` mirrors the resume's bullet structure. Wrap text in *asterisks*
+     * to emphasise it (same convention as the intro tagline and terminal).
+     */
     timeline: [
         {
             icon: Briefcase,
-            title: "Independent Study in Cloud-Native Architecture & AI Tools",
-            subtitle: "July. 2025",
-            description: "Exploring advanced backend patterns, container orchestration, and experimenting with AI-driven automation. Building small-scale prototypes and sharing insights through blog posts and GitHub projects.",
-            currently: true
+            title: "Projects / Independent Development",
+            org: "Self Employed · Freelance",
+            subtitle: "Aug. 2025 – Present · Toronto, ON",
+            current: true,
+            bullets: [
+                "Building an AI Teams chatbot with a *RAG pipeline*, using FastAPI, Azure OpenAI, and Teams Toolkit.",
+                "Working on a personal health-tech project.",
+                "Sharpening my AI, DevOps, and cloud skills — RAG, embeddings, Docker, CI/CD.",
+                "Staying active in Toronto's tech scene through DevOps and engineering meetups.",
+            ],
         },
         {
             icon: Briefcase,
-            title: "Software Developer at Actemium Canada",
-            subtitle: "Jun. 2024 - Aug. 2025",
-            description: "Developed a store-and-forward system that reduced manual intervention by 40% and improved profitability through automated reporting using Python. Setup security using JWT tokens and SSL certifications for secure data handling. Automated system execution using Linux Cron jobs, reducing manual intervention by 40%. Created a reporting system with the Ignition platform using multiple optimized custom SQL queries. Researched new opportunities, promoted the application, and successfully improved company services and profitability.",
+            title: "Software Developer",
+            org: "Actemium Summa Engineering",
+            subtitle: "Jan. 2024 – Aug. 2025 · Mississauga, ON",
+            bullets: [
+                "Built a Python integration connecting cloud-based municipal sensors (water pressure and overflow) to the Historian monitoring system — the company had never worked with cloud data or REST APIs before.",
+                "Transformed sensor JSON into the Historian's required schema by mapping every tag and column from documentation, then pushed data in over REST APIs.",
+                "Designed the integration as a decoupled, *fault-tolerant pipeline*: buffered readings in a queue when the downstream was unavailable and replayed them in order on recovery, so no data was lost.",
+                "Automated collection with scheduled cron jobs, reducing manual intervention by *95%*.",
+                "Implemented JWT tokens and SSL certificates for secure handling of sensitive data, and built optimized custom SQL reporting on the Ignition platform.",
+            ],
         },
         {
             icon: Briefcase,
-            title: "DevOps at Employment and Social Development Canada (ESDC) - Intern",
-            subtitle: "Jan. 2023 - Dec. 2023",
-            description: "Assisted in setting up cloud database infrastructure using Terraform and Ansible for configuration management.Optimized CI/CD pipelines with Jenkins, boosting deployment speed by 30%.Built and deployed automated services with Ansible, YAML, and Bash scripting.Configured API-Curio in an Azure Red Hat OpenShift environment, streamlining API integration. Monitored production systems, identifying and resolving issues proactively to reduce downtime. Attended daily stand-ups, sprint planning, and retrospectives in a Scrum environment to ensure timely project delivery.",
+            title: "DevOps Engineer — Intern",
+            org: "Employment & Social Development Canada",
+            subtitle: "Jan. 2023 – Dec. 2023 · Toronto, ON",
+            bullets: [
+                "Owned an automation project solo: an Ansible playbook triggered by a Jenkins pipeline that collects environment specs and auto-publishes them into a Confluence page, replacing a manual audit that went stale immediately.",
+                "Authenticated into each environment using bearer tokens secured with Ansible Vault, pushing inventory through Confluence's REST API.",
+                "Assisted in cloud database infrastructure setup using Terraform and Ansible, enhancing configuration management.",
+                "Improved CI/CD pipelines through caching, parallelization, and cleanup, increasing deployment speed by *30%*.",
+                "Configured API-Curio in an Azure Red Hat OpenShift (ARO) environment and resolved production issues via log analysis, reducing downtime incidents by *10%*.",
+            ],
         },
         {
             icon: Academy,
-            title: "Seneca Polytechnic",
-            subtitle: "Sep. 2019 - Dec. 2023",
-            description: "Earned a Honors in Software Development with <b>3.75 GPA</b> while working part-time. Named on presidents honors list in multiple semesters. Volunteered on tutoring other students in similar field.",
+            title: "Honours Bachelor of Technology, Software Development",
+            org: "Seneca College",
+            subtitle: "Sep. 2019 – Dec. 2023 · North York, ON",
+            bullets: [
+                "Graduated with a *GPA of 3.7*, completed while working part-time.",
+                "Named to the *President's Honour List* in multiple semesters.",
+                "Volunteered tutoring other students in the program.",
+            ],
+        },
+        {
+            icon: Academy,
+            title: "Bachelor of Civil Engineering",
+            org: "Ryerson University",
+            subtitle: "2018 – 2019",
+            bullets: [
+                "Started in civil engineering before moving into software development.",
+            ],
         },
     ],
 };

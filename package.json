@@ -3,6 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "posts": "node scripts/fetch-posts.mjs",
+    "agent:context": "node scripts/build-agent-context.mjs",
+    "agent:deploy": "wrangler deploy",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -10,7 +13,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.116.0",
     "@tailwindcss/typography": "^0.5.10",
+    "nuxt-app": "file:",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.29.0",
     "vue": "^3.4.21",
@@ -23,6 +28,7 @@
     "hookable": "^5.5.3",
     "nuxt": "^3.14.1592",
     "nuxt-svgo": "^4.0.0",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "wrangler": "^4.0.0"
   }
 }

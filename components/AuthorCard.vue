@@ -1,60 +1,60 @@
 <template>
-  <div class="md:fixed">
-    <div class="md:block flex justify-center items-center">
-      <nuxt-img
-        :src="author.author_image"
-        loading="lazy"
-        alt="me"
-        class="shadow-xl md:h-60 md:w-60 h-40 w-40 rounded-full"
-      />
-      <div class="mb-2 mx-7 mt-4 justify-center items-center">
+  <!-- No positioning here: the page owns it, so a sibling card can stack
+       beneath this one. (Was md:fixed, which took it out of flow.) -->
+  <div>
+    <div
+      class="w-full rounded-2xl border border-edge/80 bg-surface/90 supports-[backdrop-filter]:bg-surface/45 backdrop-blur-3xl backdrop-saturate-[1.8] p-6 ring-1 ring-[rgb(var(--c-shadow)/0.14)] shadow-xl shadow-[rgb(var(--c-shadow)/0.16)] md:w-72"
+    >
+      <div class="flex flex-col items-center text-center">
+        <!--
+          Rendered at 160/192px, so 384 covers 2x displays. eager, not lazy:
+          it's above the fold, and deferring it just delays the one image
+          visitors see first.
+        -->
+        <nuxt-img
+          :src="author.author_image"
+          :alt="author.name"
+          width="384"
+          height="384"
+          sizes="160px md:192px"
+          format="webp"
+          quality="82"
+          loading="eager"
+          class="h-40 w-40 rounded-full object-cover shadow-xl md:h-48 md:w-48"
+        />
         <h1
-          class="md:text-3xl text-2xl text-gray-800 font-bold dark:text-blue-100"
+          v-if="showName"
+          class="mt-4 font-display text-2xl font-bold tracking-tight text-ink md:text-3xl"
         >
           {{ author.name }}
         </h1>
-        <div class="md:text-lg text-gray-600 dark:text-blue-100">
+        <div
+          class="text-sm font-medium tracking-wide text-accent md:text-base"
+          :class="showName ? 'mt-1' : 'mt-4'"
+        >
           {{ author.position }}
         </div>
       </div>
-    </div>
 
-    <div class="mx-7 mt-3 flex flex-wrap items-center justify-center gap-3 md:hidden">
-      <a
-        v-for="contact in contactLinks"
-        :key="`mobile-${contact.id}`"
-        :href="contact.href"
-        class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 dark:border-blue-400/50 dark:bg-slate-800 dark:text-blue-100 dark:hover:bg-blue-700/40 dark:focus:ring-blue-300"
-        target="_blank"
-        rel="noopener noreferrer"
-        :aria-label="contact.label"
-      >
-        <component :is="contact.icon" class="h-5 w-5" />
-      </a>
-    </div>
-
-    <div class="mx-7 hidden md:flex md:flex-col md:gap-2">
-      <div class="my-2 text-gray-600 flex items-center gap-2 dark:text-blue-100">
-        <Mail />
-        <a :href="`mailto:${author.email}`" class="hover:underline"> {{ author.email }}</a>
-      </div>
-      <div class="my-2 text-gray-600 flex items-center gap-2 dark:text-blue-100">
-        <Glob />
-        <p>{{ author.location }}</p>
-      </div>
+      <!--
+        Icon-only links: the label lives in aria-label and title rather than
+        visible text, so screen readers and hover still identify each one.
+        Location is deliberately not repeated here — the hero terminal shows it.
+      -->
       <div
-        v-for="social in socialLinks"
-        :key="`desktop-${social.id}`"
-        class="my-2 text-gray-600 flex items-center gap-2 dark:text-blue-200"
+        class="mt-5 flex flex-wrap items-center justify-center gap-3 border-t border-line/70 pt-5"
       >
-        <component :is="social.icon" class="w-6 h-6" />
         <a
-          :href="social.href"
-          class="hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
+          v-for="contact in contactLinks"
+          :key="contact.id"
+          :href="contact.href"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line/80 bg-surface/70 text-ink-soft transition-colors hover:border-accent/40 hover:bg-accent-soft hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent/40 focus:ring-offset-2"
+          :target="contact.external ? '_blank' : undefined"
+          :rel="contact.external ? 'noopener noreferrer' : undefined"
+          :aria-label="contact.label"
+          :title="contact.label"
         >
-          {{ social.display }}
+          <component :is="contact.icon" class="h-5 w-5" />
         </a>
       </div>
     </div>
@@ -63,50 +63,48 @@
 
 <script setup>
 import author from "@/data/author.js";
-import Mail from "assets/icons/mail.svg?skipsvgo";
-import Glob from "assets/icons/glob.svg?skipsvgo";
+
+defineProps({
+  // Home shows the name as the hero <h1>, so the card hides its own to avoid
+  // a duplicate heading. Skills has no other heading, so it keeps it.
+  showName: { type: Boolean, default: true },
+});
+
 import Github from "assets/icons/github_new.svg?skipsvgo";
 import LinkedIn from "assets/icons/linkeding.svg?skipsvgo";
 import Youtube from "assets/icons/youtube.svg?skipsvgo";
 import Medium from "assets/icons/medium.svg?skipsvgo";
 
+// Email deliberately absent — it lives behind the reveal on ContactCard, so
+// putting a plain mailto: here would hand harvesters the address anyway.
 const contactLinks = [
-  {
-    id: "email",
-    label: "Email",
-    display: author.email,
-    href: `mailto:${author.email}`,
-    icon: Mail,
-  },
   {
     id: "github",
     label: "GitHub",
-    display: author.socials.github,
     href: `https://github.com/${author.socials.github}`,
     icon: Github,
+    external: true,
   },
   {
     id: "linkedin",
     label: "LinkedIn",
-    display: author.socials.linkedin,
     href: `https://linkedin.com/in/${author.socials.linkedin}`,
     icon: LinkedIn,
+    external: true,
   },
   {
     id: "medium",
     label: "Medium",
-    display: author.socials.medium,
-    href: `https://medium.com/@${author.socials.medium}`,
+    href: `https://medium.com/${author.socials.medium}`,
     icon: Medium,
+    external: true,
   },
   {
     id: "youtube",
     label: "YouTube",
-    display: author.socials.youtube,
     href: `https://youtube.com/${author.socials.youtube}`,
     icon: Youtube,
+    external: true,
   },
 ];
-
-const socialLinks = contactLinks.filter((link) => link.id !== "email");
 </script>
