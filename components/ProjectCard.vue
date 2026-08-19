@@ -104,7 +104,7 @@
           :href="link.href"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-ink-soft transition-colors hover:text-accent"
+          class="-my-3 inline-flex items-center gap-1.5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-ink-soft transition-colors hover:text-accent"
         >
           <component :is="link.icon" class="h-4 w-4" />
           {{ link.label }}

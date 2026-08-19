@@ -12,7 +12,7 @@
           :href="link.href"
           target="_blank"
           rel="noopener noreferrer"
-          class="transition-colors hover:text-accent"
+          class="-my-3 py-3 transition-colors hover:text-accent"
         >
           {{ link.label }}
         </a>

@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line bg-surface/60 text-ink-soft transition-colors hover:border-accent/40 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent/40 focus:ring-offset-2 focus:ring-offset-canvas"
+    class="inline-flex h-11 w-11 md:h-9 md:w-9 items-center justify-center rounded-full border border-line bg-surface/60 text-ink-soft transition-colors hover:border-accent/40 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent/40 focus:ring-offset-2 focus:ring-offset-canvas"
     :aria-label="`Switch to ${isDark ? 'light' : 'dark'} theme`"
     :aria-pressed="isDark"
     @click="toggle"

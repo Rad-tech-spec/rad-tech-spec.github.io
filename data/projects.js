@@ -15,6 +15,17 @@
  */
 const projectsData = [
   {
+    title: "This Site",
+    description: `The site you're reading. A statically generated Nuxt 3 portfolio on GitHub Pages, with an AI agent that answers questions about my background — grounded only in the site's own content, and served by a Cloudflare Worker so the API key never reaches the browser.`,
+    imgSrc: "",
+    href: "https://rad-tech-spec.github.io",
+    github: "https://github.com/Rad-tech-spec/rad-tech-spec.github.io",
+    techs: ["Nuxt 3", "Tailwind CSS", "Cloudflare Workers", "Claude API"],
+    visibility: "public",
+    current: true,
+    video: {},
+  },
+  {
     title: "Ario",
     description: `A Teams 365 multi-agent chatbot helped employees save time by automating vendor queries and order lookups.`,
     imgSrc: "",

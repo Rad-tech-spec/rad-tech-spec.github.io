@@ -380,7 +380,7 @@ onBeforeUnmount(() => observer?.disconnect());
   /* auto-fit: two (or more) columns whenever a 24rem track fits, one when it
      doesn't — so the card decides by available width rather than a fixed
      breakpoint, and narrow screens still get a single readable column. */
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
   gap: 0.75rem 2rem;
   align-items: start;
 }
