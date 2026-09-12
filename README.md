@@ -75,8 +75,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
-- **Email**: [Your Email]
-- **LinkedIn**: [Your LinkedIn Profile]
+- **Email**: [eshghirad101@gmail.com]
+- **LinkedIn**: [Rad Eshghi](www.linkedin.com/in/rad-eshghi)
 - **GitHub**: [@Rad-tech-spec](https://github.com/Rad-tech-spec)
 
 ---
