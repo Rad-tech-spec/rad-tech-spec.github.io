@@ -306,6 +306,17 @@ const author = {
                 "Started in civil engineering before moving into software development.",
             ],
         },
+        {
+            icon: Briefcase,
+            title: "Restaurant Supervisor",
+            org: "Cyan Caffe and Lounge",
+            subtitle: "May 2015 – Jul. 2018 · Richmond Hill, ON",
+            bullets: [
+                "Handled cash, daily reconciliation, and end-of-day reporting, balanced to the cent.",
+                "Managed operations, staff scheduling, and service for a busy restaurant.",
+                "Trained and led a *team of 10*, resolving customer concerns on the spot.",
+            ],
+        },
     ],
 };
 
