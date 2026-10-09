@@ -1,7 +1,9 @@
 <template>
   <!-- No positioning here: the page owns it, so a sibling card can stack
-       beneath this one. (Was md:fixed, which took it out of flow.) -->
-  <div>
+       beneath this one. (Was md:fixed, which took it out of flow.)
+       w-full on phones so it matches the width of the cards stacked under it;
+       without it the centring parent shrinks it to its content. -->
+  <div class="w-full md:w-auto">
     <div
       class="w-full rounded-2xl border border-edge/80 bg-surface/90 supports-[backdrop-filter]:bg-surface/45 backdrop-blur-3xl backdrop-saturate-[1.8] p-6 ring-1 ring-[rgb(var(--c-shadow)/0.14)] shadow-xl shadow-[rgb(var(--c-shadow)/0.16)] md:w-72"
     >
@@ -48,7 +50,7 @@
           v-for="contact in contactLinks"
           :key="contact.id"
           :href="contact.href"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line/80 bg-surface/70 text-ink-soft transition-colors hover:border-accent/40 hover:bg-accent-soft hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent/40 focus:ring-offset-2"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line/80 bg-surface/70 text-ink-soft press hover:border-accent/40 hover:bg-accent-soft hover:text-accent"
           :target="contact.external ? '_blank' : undefined"
           :rel="contact.external ? 'noopener noreferrer' : undefined"
           :aria-label="contact.label"

@@ -70,10 +70,13 @@ const icons = {
   transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
-.hb-tile:hover {
-  border-color: rgb(var(--c-accent) / 0.35);
-  background: rgb(var(--c-accent-soft) / 0.55);
-  transform: translateY(-1px);
+/* Touch screens fire :hover on tap and leave it stuck until the next tap. */
+@media (hover: hover) and (pointer: fine) {
+  .hb-tile:hover {
+    border-color: rgb(var(--c-accent) / 0.35);
+    background: rgb(var(--c-accent-soft) / 0.55);
+    transform: translateY(-1px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

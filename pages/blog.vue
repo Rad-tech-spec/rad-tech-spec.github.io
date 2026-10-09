@@ -112,11 +112,14 @@ useSeoMeta({
 
 <style scoped>
 .bp {
-  transition: transform 0.2s ease;
+  transition: transform 0.2s var(--ease-out);
 }
 
-.bp:hover {
-  transform: translateY(-2px);
+/* Touch screens fire :hover on tap and leave it stuck until the next tap. */
+@media (hover: hover) and (pointer: fine) {
+  .bp:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .bp-chip {

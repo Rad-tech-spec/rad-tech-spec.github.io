@@ -18,7 +18,9 @@
           <HobbiesCard />
         </div>
       </div>
-      <div class="md:flex-1 md:min-w-0 px-8">
+      <!-- px-2 on phones matches the sidebar's p-2, so the text column and the
+           cards above it share one left edge. -->
+      <div class="px-2 md:min-w-0 md:flex-1 md:px-8">
         <AuthorIntro></AuthorIntro>
         <TimeLine></TimeLine>
       </div>

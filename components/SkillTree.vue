@@ -304,10 +304,13 @@ const groupDescriptions = {
     transform 0.2s ease;
 }
 
-.st-tile--link:hover {
-  border-color: rgb(var(--c-accent) / 0.45);
-  color: rgb(var(--c-accent));
-  transform: translateY(-1px);
+/* Touch screens fire :hover on tap and leave it stuck until the next tap. */
+@media (hover: hover) and (pointer: fine) {
+  .st-tile--link:hover {
+    border-color: rgb(var(--c-accent) / 0.45);
+    color: rgb(var(--c-accent));
+    transform: translateY(-1px);
+  }
 }
 
 /*

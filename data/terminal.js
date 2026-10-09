@@ -13,11 +13,12 @@
 const terminal = {
   title: "~/rad — zsh",
   lines: [
-    { cmd: "cat stack.txt", out: "python · sql · docker · jenkins · ansible · postgresql" },
+    { cmd: "cat tech.txt", out: "python · sql · docker · ci/cd · ai/rag" },
+    { cmd: "cat people.txt", out: "sales · customer service · *exceeded targets*" },
     { cmd: "echo $CLEARANCE", out: "gc reliability status — *active*" },
     { cmd: "echo $STATUS", out: "*open to work* /full time /Contract /permanent" },
-    { cmd: "echo $LOCATION", out: "Toronto, ON"},
-    { cmd: "echo $RELOCATE", out: "Open to relocated for US opportunities"}
+    { cmd: "echo $LOCATION", out: "Greater Toronto Area, Canada"},
+    { cmd: "echo $RELOCATE", out: "Open to relocated for US opportunities (tn eligible)"}
   ],
 };
 

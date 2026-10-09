@@ -7,4 +7,4 @@ draft: false
 # Leave empty and the whole line is hidden.
 tagline: "builds backends *that don't lose data*, ships automation *that retires the manual work*."
 ---
-Two years of experience across two roles, owning builds end to end from reading the vendor docs to standing up the service. Most of my work sits where **backend integration meets automation**: making data move reliably between systems. 
+Two years of experience across two roles, owning builds end to end from reading the vendor docs to standing up the service. Most of my work sits where **backend integration meets automation**: making data move reliably between systems. I also bring **7 years of customer service and sales experience**, so I'm as comfortable talking with the people who use a system as I am building it.

@@ -33,7 +33,6 @@ const projectsData = [
     github: "",
     techs: ["Python", "Typescript", "Azure", "Teams"],
     visibility: "private",
-    current: true,
     video: {},
   },
   {

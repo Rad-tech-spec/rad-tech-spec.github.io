@@ -273,6 +273,31 @@ const author = {
             ],
         },
         {
+            icon: Briefcase,
+            title: "Sales Specialist",
+            org: "Premium Retail Services",
+            subtitle: "Sep. 2020 – Dec. 2022 · Mississauga, ON",
+            bullets: [
+                "Identified what each customer needed and recommended the right product, rather than pushing a sale.",
+                "Recognized as a *Top 3 salesperson in Canada* (2021, 2022) out of the national team.",
+                "Built rapport quickly and handled questions, concerns, and objections professionally.",
+                "Met and exceeded targets through attentive, personalized service.",
+                "Worked with retail partners and staff to keep the experience smooth.",
+            ],
+        },
+        {
+            icon: Briefcase,
+            title: "Customer Service Sales Representative",
+            org: "Best Buy Canada",
+            subtitle: "Jul. 2018 – Sep. 2020 · Richmond Hill, ON",
+            bullets: [
+                "Handled point-of-sale transactions and cash accurately, at volume, all day.",
+                "Served *over 50 customers daily* in a busy store without letting service slip.",
+                "Explained products clearly, matched customers to what fit, and earned repeat business.",
+                "Kept product knowledge current across categories to answer questions confidently.",
+            ],
+        },
+        {
             icon: Academy,
             title: "Bachelor of Civil Engineering",
             org: "Ryerson University",

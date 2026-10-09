@@ -1,7 +1,9 @@
 <template>
   <footer class="mt-20 border-t border-line/70">
+    <!-- Same gutters as the page content above, so the copyright and the links
+         line up with its edges instead of floating in a narrower centred box. -->
     <div
-      class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 py-8 text-sm text-ink-muted sm:flex-row sm:justify-between"
+      class="flex flex-col items-center gap-3 px-4 py-8 text-sm text-ink-muted sm:flex-row sm:justify-between sm:px-6"
     >
       <p>&copy; {{ new Date().getFullYear() }} {{ author.name }}</p>
 

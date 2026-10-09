@@ -1,8 +1,10 @@
 <template>
   <div class="mt-12">
-    <h3 class="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">
+    <!-- h2, not h3: it follows the page's h1 directly, and skipping a level
+         breaks heading navigation for screen readers. -->
+    <h2 class="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">
       Experience &amp; Education
-    </h3>
+    </h2>
 
     <ol ref="listEl" class="tl">
       <!--
@@ -19,7 +21,7 @@
         :ref="(el) => (itemEls[index] = el)"
         class="tl__item"
         :class="{ 'is-visible': visible[index] }"
-        :style="{ transitionDelay: `${index * 90}ms` }"
+        :style="{ transitionDelay: `${delays[index]}ms` }"
       >
         <span
           class="tl__node"
@@ -80,7 +82,7 @@
             class="tl__panel"
             :class="{ 'tl__panel--open': open[index] }"
           >
-            <div class="overflow-hidden">
+            <div class="tl__panel-inner overflow-hidden">
               <ul class="tl__bullets">
                 <li v-for="(bullet, b) in time.bullets" :key="b">
                   <span class="tl__dot" aria-hidden="true"></span>
@@ -113,6 +115,11 @@ const itemEls = ref([]);
 // still be fully readable rather than a column of collapsed, empty cards.
 const visible = ref(timeline.map(() => true));
 const open = ref(timeline.map(() => true));
+// Stagger is per batch, not per index: entries that scroll into view together
+// cascade, but one arriving alone starts immediately. Keying it to the index
+// made the last entries wait over half a second after they were on screen.
+const delays = ref(timeline.map(() => 0));
+const STAGGER_MS = 60;
 
 let observer = null;
 
@@ -143,10 +150,14 @@ onMounted(() => {
 
   observer = new IntersectionObserver(
     (entries) => {
+      let order = 0;
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const index = itemEls.value.indexOf(entry.target);
-        if (index !== -1) visible.value[index] = true;
+        if (index !== -1) {
+          delays.value[index] = order++ * STAGGER_MS;
+          visible.value[index] = true;
+        }
         observer.unobserve(entry.target);
       });
     },
@@ -229,9 +240,11 @@ onBeforeUnmount(() => observer?.disconnect());
   border-radius: 9999px;
   /* Ring in the page background so the rail appears to pass behind the node */
   box-shadow: 0 0 0 5px var(--page-bg);
-  transform: scale(0.4);
+  /* 0.8, not 0.4: a node that grows from nearly nothing reads as popping out
+     of nowhere; from here it reads as settling into place. */
+  transform: scale(0.8);
   opacity: 0;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+  transition: transform 0.5s var(--ease-out), opacity 0.4s ease;
   transition-delay: inherit;
 }
 
@@ -330,8 +343,11 @@ onBeforeUnmount(() => observer?.disconnect());
   }
 }
 
-.tl__card:hover {
-  background: rgb(var(--c-surface) / 0.6);
+/* Touch screens fire :hover on tap and leave it stuck until the next tap. */
+@media (hover: hover) and (pointer: fine) {
+  .tl__card:hover {
+    background: rgb(var(--c-surface) / 0.6);
+  }
 }
 
 .tl__trigger {
@@ -357,7 +373,7 @@ onBeforeUnmount(() => observer?.disconnect());
   flex-shrink: 0;
   margin-top: 0.3rem;
   color: rgb(var(--tl-accent));
-  transition: transform 0.25s ease;
+  transition: transform 0.25s var(--ease-out);
 }
 
 .tl__chevron--open {
@@ -374,13 +390,30 @@ onBeforeUnmount(() => observer?.disconnect());
   grid-template-rows: 1fr;
 }
 
+/* The text fades with the height change, so a closing panel doesn't show a
+   row of half-clipped lines on its way out. Closing is quicker than opening. */
+.tl__panel-inner {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.tl__panel--open .tl__panel-inner {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.05s;
+}
+
 .tl__bullets {
   padding: 0 1.25rem 1.25rem;
   display: grid;
-  /* auto-fit: two (or more) columns whenever a 24rem track fits, one when it
-     doesn't — so the card decides by available width rather than a fixed
-     breakpoint, and narrow screens still get a single readable column. */
-  grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
+  /* auto-fit: two columns whenever a 24rem track fits, one when it doesn't —
+     so the card decides by available width rather than a fixed breakpoint,
+     and narrow screens still get a single readable column. The 50% term caps
+     it at two: on a wide card a third column left bullets at uneven heights
+     with a stray one underneath. */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, max(24rem, calc(50% - 1rem))), 1fr)
+  );
   gap: 0.75rem 2rem;
   align-items: start;
 }
@@ -422,6 +455,8 @@ onBeforeUnmount(() => observer?.disconnect());
   }
 
   .tl__panel,
+  .tl__panel-inner,
+  .tl__panel--open .tl__panel-inner,
   .tl__chevron {
     transition: none;
   }

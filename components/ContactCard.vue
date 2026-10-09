@@ -12,7 +12,7 @@
     <button
       v-if="state === 'idle'"
       type="button"
-      class="mt-5 inline-flex w-full items-center justify-center rounded-full bg-accent px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-accent-contrast transition-colors hover:bg-accent-deep"
+      class="mt-5 inline-flex w-full items-center justify-center rounded-full bg-accent px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-accent-contrast press hover:bg-accent-deep"
       @click="reveal"
     >
       Show contacts

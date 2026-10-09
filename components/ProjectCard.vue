@@ -154,11 +154,14 @@ const links = computed(() => {
 
 <style scoped>
 .pc {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s var(--ease-out);
 }
 
-.pc:hover {
-  transform: translateY(-2px);
+/* Touch screens fire :hover on tap and leave it stuck until the next tap. */
+@media (hover: hover) and (pointer: fine) {
+  .pc:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .pc-chip {

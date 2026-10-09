@@ -47,7 +47,7 @@
           <li v-for="q in suggestions" :key="q">
             <button
               type="button"
-              class="rounded-full border border-line/70 bg-surface/50 px-4 py-2 text-sm text-ink-soft transition-colors hover:border-accent/40 hover:text-accent"
+              class="rounded-full border border-line/70 bg-surface/50 px-4 py-2 text-sm text-ink-soft press hover:border-accent/40 hover:text-accent"
               @click="send(q)"
             >
               {{ q }}
@@ -70,12 +70,12 @@
         :maxlength="MAX_CHARS"
         :disabled="pending"
         placeholder="Ask something…"
-        class="min-w-0 flex-1 rounded-full border border-line/70 bg-surface/50 px-5 py-3 text-sm text-ink placeholder:text-ink-muted/70 focus:border-accent/50 focus:outline-none disabled:opacity-60"
+        class="min-w-0 flex-1 rounded-full border border-line/70 bg-surface/50 px-5 py-3 text-sm text-ink transition-colors placeholder:text-ink-muted focus:border-accent/60 disabled:opacity-60"
       />
       <button
         type="submit"
         :disabled="pending || !draft.trim()"
-        class="shrink-0 rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-accent-contrast transition-colors hover:bg-accent-deep disabled:opacity-40"
+        class="shrink-0 rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-accent-contrast press hover:bg-accent-deep disabled:pointer-events-none disabled:opacity-40"
       >
         Send
       </button>
